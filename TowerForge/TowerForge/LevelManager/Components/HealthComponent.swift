@@ -22,7 +22,7 @@ class HealthComponent: TFComponent {
     }
     
     func increaseHealth(amount: Int) {
-        self.currentHealth = max(self.currentHealth + amount, self.maxHealth)
+        self.currentHealth = min(self.currentHealth + amount, self.maxHealth)
     }
     
     func restoreHealth() {
